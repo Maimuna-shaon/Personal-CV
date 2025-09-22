@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Maimuna Akter Shawon — Portfolio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS for scroll animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Remix Icons for small icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg-1: #05161e; --bg-2:#0a3ca1; --card: rgba(1, 11, 30, 0.85); --accent1:#7c3aed; --accent2:#2dd4bf; --muted:#eff0f3;
+    }
+    html,body{height:100%;min-width: 100vh;}
+    body{background: linear-gradient(to bottom, #197fbd 0%, #123461 50%, #041321 100%);
+  background-attachment: fixed;   /* ✅ makes it seamless when scrolling */
+  background-repeat: no-repeat;
+  background-size:contain;
+  color: #e6eef8;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial;}
+
+    /* Layout */
+    .layout{min-height:100vh;display:flex}
+    /* Sidebar */
+    .sidebar{width:300px;flex-shrink:0;padding:32px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-right:1px solid rgba(255,255,255,0.03)}
+    .sidebar .photo{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:44px;color:#041321;box-shadow:0 10px 30px rgba(234, 233, 236, 0.15)}
+    .sidebar h1{font-size:20px;margin-top:14px}
+    .sidebar p{color:var(--muted);margin-bottom:8px}
+    .socials a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);color:var(--muted);margin-right:8px;margin-top:8px}
+    .download-cv{margin-top:14px}
+
+    /* Main content */
+    .main{flex:1;padding:32px 48px}
+    .section{padding:48px 0}
+    .section-title{display:flex;align-items:end;justify-content:space-between}
+    .h2{font-size:22px;font-weight:700}
+    .decor{height:4px;width:72px;background:linear-gradient(90deg,var(--accent1),var(--accent2));border-radius:4px;margin-top:8px}
+
+    /* Featured project */
+    .featured{display:flex;gap:24px;align-items:stretch}
+    .featured .thumb{flex:0 0 360px;border-radius:12px;overflow:hidden;background:#0d1722}
+    .featured .thumb img{width:100%;height:100%;object-fit:cover}
+    .card-ghost{background:var(--card);border-radius:12px;padding:18px}
+
+    /* Project card hover */
+    .project-card{background: rgba(1, 11, 30, 0.85);border-radius:12px;padding:16px;transition:transform .5s, box-shadow .5s, border 1.5px solid rgba(194, 192, 199, 0.18);}
+    .project-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.6)}
+
+    /* Skills */
+    .skill-badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+
+    /* Footer */
+    footer{padding:20px 32px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:991px){
+      .layout{flex-direction:column}
+      .sidebar{width:100%;display:flex;align-items:center;gap:16px}
+      .main{padding:20px}
+      .featured{flex-direction:column}
+      .featured .thumb{width:100%;height:220px}
+    }
+
+    /* Small touches */
+    a.btn-outline-light:hover{color:rgb(4, 45, 74)}
+    .muted{color:var(--muted)}
+    .nav-link{color:var(--muted)}
+    .nav-link.active{color:var(--accent1);font-weight:600}
+  </style>
+</head>
+<body>
+  
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar d-none d-lg-block">
+      <div class="d-flex flex-column align-items-center text-center">
+        <div class="photo">MS</div>
+        <h1>Maimuna Akter Shawon</h1>
+        <p class="muted">BSc. in Computer Science & Engineering — Aspiring Software Engineer • Competitive Programmer</p>
+
+        <div class="mt-3 w-100">
+          <div class="d-flex justify-content-center gap-2 socials">
+            <a href="https://github.com/Maimuna-shaon" target="_blank"><i class="ri-github-fill"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/maimunashawon/" target="_blank"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+          </div>
+          <div class="download-cv text-center">
+            <a href="/shawon_cv.pdf" class="btn btn-outline-light btn-sm">Download CV</a>
+          </div>
+        </div>
+
+        <hr style="width:80%;border-color:rgba(255,255,255,0.03);margin:18px 0">
+        <div class="text-start w-100 px-2">
+          <h6 class="mb-1">Contact</h6>
+          <div class="muted">shawon213236@gmail.com</div>
+          <div class="muted">01634-872773</div>
+          <div class="mt-3"><small class="muted">Location</small><div>Chittagong, Bangladesh</div></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+     
+    <div class="main">
+      <!-- Top mobile navbar -->
+      <nav class="navbar navbar-expand-lg navbar-danger mb-3">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand" href="#home">Maimuna</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mobileNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#featured">Featured</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#publication">Publication</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#cp">CP</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HERO / Featured intro -->
+      <section id="home" class="section" data-aos="fade-up">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
+            <div style="flex:1;min-width:260px">
+              <h2 class="h2">Hello — I'm Maimuna</h2>
+              <div class="decor"></div>
+              <p class="muted mt-3">I build web applications (Django + React) and love solving algorithmic problems. I also work on research and AI projects. Currently completed my 8th semester undergraduate at IIUC.</p>
+
+              <div class="mt-3 d-flex gap-2 flex-wrap">
+                <a class="btn btn-primary btn-sm" href="#featured">See Featured</a>
+                <a class="btn btn-primary btn-outline-light btn-sm" href="/shawon_cv.pdf">Download CV</a>
+                <a class="btn btn-primary btn-outline-light btn-sm" href="mailto:shawon213236@gmail.com">Contact</a>
+              </div>
+            </div>
+
+           <!--- <div style="width:340px" class="d-none d-md-block" data-aos="zoom-in">
+              <div class="card card-ghost">
+                <div class="d-flex align-items-center gap-3">
+                  <div style="width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#041321">MS</div>
+                  <div>
+                    <h5 class="muted">Maimuna Akter Shawon</h5>
+                    <div class="muted">Assistant General Secretary — IIUC Female Competitive Society</div>
+                    <div class="muted">CP &amp; Web Dev</div>
+                  </div>
+                </div>
+                <div class="mt-3 small muted">Quick links</div>
+                <div class="mt-2 d-flex gap-2 flex-wrap">
+                  <a class="skill-badge" href="skills">Skills</a>
+                  <a class="skill-badge">Django</a>
+                  <a class="skill-badge">React</a>
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section" data-aos="fade-right">
+        <div class="container-fluid">
+          <div class="section-title">
+            <div>
+              <div class="h2">About</div>
+              <div class="decor"></div>
+            </div>
+          </div>
+
+          <div class="mt-4 row g-4">
+            <div class="col-lg-12">
+              <div class="card-ghost">
+                <p>I am a Computer Science undergraduate at International Islamic University Chittagong. I build web applications using Django & React.js, work on ML projects for medical imaging, and compete in algorithmic contests. I enjoy mentorship and teaching, and I am active in IEEE WIE and competitive programming societies.</p>
+
+                <h6 class="mt-3">Key activities</h6>
+                <ul class="muted">
+                  <li>General Secretary — IEEE IIUC WIE Affinity Group - (2024-2025)</li>
+                  <li>Assistant General Secretary — IIUC Female Competitive Programming Society - 2025</li>
+                  <li>Teaching Assistant in CSE Lab(OOP, Algorithm, Software Development courses) - (2024-2025)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!--<div class="col-lg-4">
+              <div class="card-ghost p-3">
+                <h6 class="mb-2">Contact</h6>
+                <div class="muted">Email: shawon213236@gmail.com</div>
+                <div class="muted">Phone: 01634-872773</div>
+                <div class="muted mt-2">Location: Chittagong, Bangladesh</div>
+                <div class="mt-3">
+                  <a class="btn btn-outline-light btn-sm" href="https://github.com/Maimuna-shaon" target="_blank"><i class="ri-github-fill"></i> GitHub</a>
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section id="featured" class="section" data-aos="fade-up">
+        <div class="container-fluid">
+          <div class="section-title mb-3">
+            <div><div class="h2">Featured Projects</div><div class="decor"></div></div>
+            <div class="muted">Selected projects — larger highlight</div>
+          </div>
+
+          <div class="featured">
+            <div class="thumb">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop&s=example" alt="project thumb">
+            </div>
+            <div class="card-ghost flex-grow-1 p-4">
+              <h4 class="mb-2"><a href="https://github.com/Maimuna-shaon/OnlineQuiz_Django" target="_blank" class="text-decoration-none text-white">Online Quiz System</a></h4>
+              <p class="muted">A Django-based platform to create and host quizzes, manage participants and scores, and export results for instructors. Implemented role-based access, file uploads, and a responsive UI.</p>
+              <div class="mt-3">
+                <span class="skill-badge">Django</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">SQL</span>
+              </div>
+
+              <div class="mt-4 d-flex gap-2">
+                <a href="#projects" class="btn btn-primary btn-sm">View all projects</a>
+                <a href="https://github.com/Maimuna-shaon/OnlineQuiz_Django" target="_blank" class="btn btn-outline-light btn-sm">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS GRID -->
+      <section id="projects" class="section" data-aos="fade-up">
+        <div class="container-fluid">
+          <div class="section-title mb-3"><div class="h2">Projects</div><div class="decor"></div></div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="project-card p-3">
+                <h5><a href="https://github.com/Maimuna-shaon/NoteStream/tree/master" target="_blank" class="text-decoration-none text-white">Notes Sharing System</a></h5>
+                <p class="muted small">PHP • HTML • CSS • JS • SQL — “Online Notes Sharing System Project” is a web based technology that manages user and notes database and provides rights to update their details and notes.In this web application user must be registered. This web application provides a way to effectively control record & track the user details.</p>
+                <div class="mt-2"><span class="skill-badge">PHP</span> <span class="skill-badge">SQL</span></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="project-card p-3">
+                <h5><a href="https://github.com/Maimuna-shaon/NoteStream/tree/master" target="_blank" class="text-decoration-none text-white">COVID-19 Testing Management System</a></h5>
+                <p class="muted small">PHP • HTML • CSS • JS • SQL — The COVID-19 Testing Management System is a web-based application developed using PHP and MySQL to streamline the entire COVID-19 testing process. It allows patients to register, book tests, track their status, and download results online.</p>
+                <div class="mt-2"><span class="skill-badge">PHP</span> <span class="skill-badge">SQL</span></div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="project-card p-3">
+                <h5>AI Restaurent Waiter Robot</h5>
+                <p class="muted small">AI based Waiter Robot is a system where Robot navigate from kitchen to table and table to kitchen with a minimum cost path and minimum time in the restaurent.Avoiding obstacle and choosing optimal path is based on A* search Algorithm.</p>
+                <div class="mt-2"><span class="skill-badge">AI</span> <span class="skill-badge">Python</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="publication" class="section" data-aos="fade-right">
+        <div class="container-fluid">
+          <div class="section-title"><div class="h2">Publication</div><div class="decor"></div></div>
+          <div class="card-ghost p-3 mt-3">
+            <strong>Conference:</strong><br>
+            <strong>Maimuna Akter Shawon et al.(2025).An Approach to Detect Fraudulent Online Product Posts Using Machine
+Learning Techniques.In THE 16th INTERNATIONAL IEEE CONFERENCE ON COMPUTING, COMMUNICATION
+AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- COMPETITIVE PROGRAMMING -->
+      <section id="cp" class="section" data-aos="zoom-in">
+        <div class="container-fluid">
+          <div class="section-title"><div class="h2">Competitive Programming</div><div class="decor"></div></div>
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6 col-md-3">
+              <div class="card-ghost text-center p-3">
+                <div class="fw-bold">Codeforces</div>
+                <div class="muted">Handle: <a href="https://codeforces.com/profile/Maimuna_shaon" target="_blank" class="d-block mt-1 text-decoration-none">Maimuna-shaon</a></div>
+                <div class="mt-2">Max: <strong>1070</strong></div>
+                <div>Solved: <strong>663</strong></div>
+              </div>
+            </div>
+           
+            <div class="col-sm-6 col-md-3">
+              <div class="card-ghost text-center p-3">
+                <div class="fw-bold">CodeChef</div>
+                <div class="muted">Handle: <a href="https://www.codechef.com/users/shawon_36" target="_blank" class="d-block mt-1 text-decoration-none">shawon_36</a></div>
+                <div class="mt-2">Max: <strong>1408</strong></div>
+                <div>Solved: <strong>143</strong></div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+              <div class="card-ghost text-center p-3">
+                <div class="fw-bold">LeetCode</div>
+                <div class="muted">Handle: <a href="https://leetcode.com/Shawon_36/" target="_blank" class="d-block mt-1 text-decoration-none">Shawon_36</a></div>
+                
+                <div class="mt-2">Solved: <strong>182</strong></div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+              <div class="card-ghost text-center p-3">
+                <div class="fw-bold">AtCoder</div>
+                 <div class="muted">Handle: <a href="https://atcoder.jp/users/Maimuna_shaon" target="_blank" class="d-block mt-1 text-decoration-none">Maimuna-shaon</a></div>
+                <div class="mt-2">Max: <strong>309</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section" data-aos="fade-up">
+        <div class="container-fluid">
+          <div class="section-title"><div class="h2">Skills</div><div class="decor"></div></div>
+          <div class="row g-3 mt-3">
+            <div class="col-md-6">
+              <p class="mb-1">Python</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:95%"></div></div>
+
+              <p class="mb-1">C++</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:100%"></div></div>
+
+              <p class="mb-1">Django</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:90%"></div></div>
+              <p class="mb-1">C</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:100%"></div></div>
+            </div>
+
+            <div class="col-md-6">
+              <p class="mb-1">React.js</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:75%"></div></div>
+
+              <p class="mb-1">JavaScript / Web</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:80%"></div></div>
+
+              <p class="mb-1">SQL</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:70%"></div></div>
+
+              <p class="mb-1">PHP</p>
+              <div class="progress mb-2" style="height:8px"><div class="progress-bar" role="progressbar" style="width:70%"></div></div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section" data-aos="fade-right">
+        <div class="container-fluid">
+          <div class="section-title"><div class="h2">Education</div><div class="decor"></div></div>
+          <div class="card-ghost p-3 mt-3">
+            <strong>International Islamic University Chittagong</strong><br>
+            BSc. in Computer Science and Engineering — CGPA: 3.801(till 22-09-2025)
+          </div>
+          <div class="card-ghost p-3 mt-3">
+            <strong>Chittagong Government Women's College</strong><br>
+            HSC in Science — GPA: 5.00 (2020)
+          </div>
+          <div class="card-ghost p-3 mt-3">
+            <strong>Uttar Rangunia High School</strong><br>
+            SSC in Science — GPA: 5.00 (2017)
+          </div>
+        </div>
+      </section>
+    <!--Achievements-->
+    <section id="achievments" class="section" data-aos="fade-up">
+        <div class="container-fluid">
+          <div class="section-title"><div class="h2">Achievements</div><div class="decor"></div></div>
+          <div class="card-ghost p-3 mt-3">
+            <ul class="muted">
+              <li><strong>1st Runners Up at IIUC Intra University Team Programming Contest - 2023</strong></li>
+              <li><strong>Participate in IIUC Inter University Programming Contest, CSE FEST 2023</strong></li>
+              <li><strong>Best Feamle Team at IIUC Intra University Team Programming Contest - 2023</strong></li>
+              <li><strong>Best Performer at IIUC Female Programming Bootcamp Contest - 2022</strong></li>
+              <li><strong>Participate in ICPC Preliminary Contest-2022,2023,2024</strong></li>
+              </ul>
+            </div>
+          </div>
+    </section>
+      
+      <!-- CONTACT -->
+      <section id="contact" class="section" data-aos="fade-up">
+        <div class="container-fluid">
+          <div class="section-title"><div class="h2">Contact</div><div class="decor"></div></div>
+          <div class="card-ghost p-3 mt-3">
+            <p>Email: <a href="mailto:shawon213236@gmail.com" class="text-decoration-none">shawon213236@gmail.com</a></p>
+            <p>Phone: 01634-872773</p>
+            <div class="mt-3 d-flex gap-2">
+              <a href="https://github.com/Maimuna-shaon" target="_blank" class="btn btn-outline-light btn-sm"><i class="ri-github-fill"></i> GitHub</a>
+              <a href="https://www.linkedin.com/in/maimunashawon/" target="_blank" class="btn btn-outline-light btn-sm"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="muted">Made with ♥ • <a href="https://github.com/Maimuna-shaon" target="_blank" class="text-decoration-none">View on GitHub</a> • Last updated: 2025</div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({duration:800,once:true});
+
+    // Smooth activate mobile nav links
+    document.querySelectorAll('.nav-link').forEach(n=>n.addEventListener('click',()=>{document.querySelector('.navbar-collapse.show')?.classList.remove('show')}))
+
+    // Optional: copy email quick action
+    document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{
+      a.addEventListener('click',()=>{});
+    });
+  </script>
+</body>
+</html>
