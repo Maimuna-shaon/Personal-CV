@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Maimuna Akter Shawon — Portfolio</title>
+  <title>Maimuna Akter Shawon</title>
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,12 +29,12 @@
     /* Sidebar */
     .sidebar{width:300px;flex-shrink:0;padding:32px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-right:1px solid rgba(255,255,255,0.03)}
     .sidebar .photo {
-  background-image: url('./Maimuna Akter Shawon.jpg');
+  
   background-size: cover;
   background-position: center;
-  /*height: 250px;
-  /*border-radius: 50%;
-  /*background: linear-gradient(135deg, var(--accent1), var(--accent2));*/
+  
+  border-radius: 50%;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,9 +91,12 @@
 
   <div class="layout">
     <!-- SIDEBAR -->
-    <aside class="sidebar d-none d-lg-block">
+    <aside class="sidebar">
       <div class="d-flex flex-column align-items-center text-center">
-        <div class="photo"></div>
+        <div class="photo">
+            <img src="Maimuna_Akter_Shawon.jpg" alt="Maimuna Akter Shawon" style="width:140px;height:140px;border-radius:50%;object-fit:cover;">
+
+        </div>
         <h1>Maimuna Akter Shawon</h1>
         <p class="muted">BSc. in Computer Science & Engineering — Aspiring Software Engineer • Competitive Programmer</p>
 
@@ -290,6 +293,50 @@
           </div>
         </div>
       </section>
+        <section id="portfolio" class="section" data-aos="zoom-in">
+    <div class="container-fluid">
+      <div class="section-title">
+        <div class="h2">Portfolio</div>
+        <div class="decor"></div>
+      </div>
+
+      <div class="row g-4 mt-2">
+        <!-- Shortly Project -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100" data-project="shortly">
+            <img src="shortly.png" class="card-img-top" alt="Shortly Project" height="400px">
+            <div class="card-body">
+              <h5 class="card-title text-light">Shortly – Link Shortener</h5>
+              <p class="card-text text-light">Minimal landing page for shortening links.</p>
+              <a href="https://maimuna-shaon.github.io/Final-Project/" class="btn btn-outline-primary" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <!-- Timeline Project -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100" data-project="timeline">
+            <img src="verticle.png" class="card-img-top" alt="Timeline Project">
+            <div class="card-body">
+              <h5 class="card-title text-light">Vertical Dark Timeline</h5>
+              <p class="card-text text-light">Dark themed responsive timeline component.</p>
+              <a href="https://maimuna-shaon.github.io/Vartical-dark-Timeline/" class="btn btn-outline-primary" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <!-- Foolish Developer Project -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100" data-project="foolish">
+            <img src="foolish.png" class="card-img-top" alt="Foolish Developer" height="400px">
+            <div class="card-body">
+              <h5 class="card-title text-light">Foolish Developer</h5>
+              <p class="card-text text-light">Login UI with clean frontend design.</p>
+              <a href="https://maimuna-shaon.github.io/Foolish-developer/"  class="btn btn-outline-primary" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
       <section id="publication" class="section" data-aos="fade-right">
         <div class="container-fluid">
           <div class="section-title"><div class="h2">Publication</div><div class="decor"></div></div>
@@ -312,7 +359,7 @@ AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
               <div class="card-ghost text-center p-3">
                 <div class="fw-bold">Codeforces</div>
                 <div class="muted">Handle: <a href="https://codeforces.com/profile/Maimuna_shaon" target="_blank" class="d-block mt-1 text-decoration-none">Maimuna-shaon</a></div>
-                <div class="mt-2">Max: <strong>1070</strong></div>
+                <div class="mt-2">Max_Rating: <strong>1087*</strong></div>
                 <div>Solved: <strong>663</strong></div>
               </div>
             </div>
@@ -321,7 +368,7 @@ AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
               <div class="card-ghost text-center p-3">
                 <div class="fw-bold">CodeChef</div>
                 <div class="muted">Handle: <a href="https://www.codechef.com/users/shawon_36" target="_blank" class="d-block mt-1 text-decoration-none">shawon_36</a></div>
-                <div class="mt-2">Max: <strong>1408</strong></div>
+                <div class="mt-2">Max_Rating: <strong>1408*</strong></div>
                 <div>Solved: <strong>143</strong></div>
               </div>
             </div>
@@ -330,8 +377,8 @@ AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
               <div class="card-ghost text-center p-3">
                 <div class="fw-bold">LeetCode</div>
                 <div class="muted">Handle: <a href="https://leetcode.com/Shawon_36/" target="_blank" class="d-block mt-1 text-decoration-none">Shawon_36</a></div>
-                
-                <div class="mt-2">Solved: <strong>182</strong></div>
+                <div class="mt-2">Max_Rating: <strong>*</strong></div>
+                <div>Solved: <strong>182</strong></div>
               </div>
             </div>
 
@@ -339,12 +386,15 @@ AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
               <div class="card-ghost text-center p-3">
                 <div class="fw-bold">AtCoder</div>
                  <div class="muted">Handle: <a href="https://atcoder.jp/users/Maimuna_shaon" target="_blank" class="d-block mt-1 text-decoration-none">Maimuna-shaon</a></div>
-                <div class="mt-2">Max: <strong>309</strong></div>
+                <div class="mt-2">Max_Rating: <strong>309</strong></div>
+                <div>Solved: <strong>150</strong></div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
+      
 
       <!-- SKILLS -->
       <section id="skills" class="section" data-aos="fade-up">
@@ -415,6 +465,33 @@ AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
             </div>
           </div>
     </section>
+     <!-- CERTIFICATES -->
+  <section id="certificates" class="section" data-aos="fade-up">
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="section-title">
+        <div class="h2">Certificates</div>
+        <div class="decor"></div>
+      </div>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6">
+          <div class="card-ghost p-3">
+            <h5>Supervised Machine Learning: Regression and Classification</h5>
+            <p class="muted small">Stanford University & DeepLearning.AI (Coursera, Dec 2024)</p>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/7LXZ8SZXVC4Q" 
+               target="_blank" class="btn btn-outline-primary btn-sm">View Certificate</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-ghost p-3">
+            <h5>Introduction to Machine Learning</h5>
+            <p class="muted small">Duke University (Coursera, Feb 2025)</p>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/M9P4DLRUR8L9" 
+               target="_blank" class="btn btn-outline-primary btn-sm">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
       
       <!-- CONTACT -->
       <section id="contact" class="section" data-aos="fade-up">
@@ -436,6 +513,8 @@ AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
       </footer>
     </div>
   </div>
+   
+  
 
   <!-- Bootstrap JS + AOS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -450,10 +529,45 @@ AND NETWORKING TECHNOLOGIES (ICCCNT) To be published in IEEE Xplore.</strong>
     document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{
       a.addEventListener('click',()=>{});
     });
+    const projectData = {
+      shortly: {
+        title: "Shortly – Link Shortener",
+        description: `<p>A frontend landing page that allows users to shorten URLs with a clean responsive UI.</p>
+                      <img src="assets/img/projects/shortly-preview.png" class="img-fluid mb-3">`,
+        live: "https://maimuna-shaon.github.io/Final-Project/",
+        github: "https://github.com/maimuna-shaon/Final-Project"
+      },
+      timeline: {
+        title: "Vertical Dark Timeline",
+        description: `<p>A vertical dark-themed timeline built with HTML & CSS, fully responsive.</p>
+                      <img src="assets/img/projects/timeline-preview.png" class="img-fluid mb-3">`,
+        live: "https://maimuna-shaon.github.io/Vartical-dark-Timeline/",
+        github: "https://github.com/maimuna-shaon/Vartical-dark-Timeline"
+      },
+      foolish: {
+        title: "Foolish Developer",
+        description: `<p>A clean login UI design with modern frontend styling.</p>
+                      <img src="assets/img/projects/foolish-preview.png" class="img-fluid mb-3">`,
+        live: "https://maimuna-shaon.github.io/Foolish-developer/",
+        github: "https://github.com/maimuna-shaon/Foolish-developer"
+      }
+    };
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-project');
+        const project = projectData[key];
+        document.getElementById('modalTitle').innerText = project.title;
+        document.getElementById('modalBody').innerHTML = project.description;
+        document.getElementById('modalLiveLink').href = project.live;
+        document.getElementById('modalGithubLink').href = project.github;
+        const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+        modal.show();
+      });
+    });
   </script>
 </body>
 </html>
-
 
 
 
